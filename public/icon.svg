@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="26" fill="#FAF6EE"/>
+  <rect x="8" y="8" width="104" height="104" rx="20" fill="#FFFDF9" stroke="#1C1714" stroke-width="3"/>
+  <!-- Toldo de tienda de barrio de 3 ondas -->
+  <path d="M18 26H102L106 44C106 51 100 56 92 56C84 56 78 51 78 44C78 51 70 56 60 56C50 56 42 51 42 44C42 51 36 56 28 56C20 56 14 51 14 44L18 26Z" fill="#C83E2B" stroke="#1C1714" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M42 26V44M78 26V44" stroke="#FAF6EE" stroke-width="3" stroke-linecap="round"/>
+  <!-- Letra M artesanal -->
+  <path d="M34 92V66L47 82L60 64L73 82L86 66V92" stroke="#1C1714" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="60" cy="92" r="4" fill="#1B6B4A"/>
+</svg>

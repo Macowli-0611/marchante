@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   Utilidades de Tailwind generadas a partir de los tokens semánticos.
+   Usa SIEMPRE estas clases (text-ink, bg-paper, border-line, bg-brand...) en vez de
+   colores en hex dentro de los componentes. Para cambiar un color se toca solo :root.
+   ============================================================================ */
+@theme inline {
+  --color-ink: var(--text-ink);
+  --color-ink-soft: var(--text-secondary);
+  --color-ink-muted: var(--text-muted);
+  --color-ink-faint: var(--text-faint);
+  --color-ink-hover: var(--bg-ink-hover);
+
+  --color-canvas: var(--bg-canvas);
+  --color-paper: var(--bg-card);
+  --color-subtle: var(--bg-subtle);
+  --color-line: var(--border-ink);
+  --color-line-strong: var(--border-soft);
+
+  --color-brand: var(--accent-primary);
+  --color-brand-strong: var(--accent-primary-hover);
+  --color-brand-soft: var(--accent-primary-soft);
+
+  --color-profit: var(--accent-profit);
+  --color-profit-strong: var(--accent-profit-hover);
+  --color-profit-soft: var(--accent-profit-soft);
+
+  --color-warning: var(--accent-warning);
+  --color-warning-soft: var(--accent-warning-soft);
+
+  --color-danger: var(--accent-danger);
+  --color-danger-soft: var(--accent-danger-soft);
+
+  /* Sombras "sello" (desplazadas, sin difuminar) */
+  --shadow-stamp-1: 1px 1px 0 0 var(--text-ink);
+  --shadow-stamp-2: 2px 2px 0 0 var(--text-ink);
+  --shadow-stamp-3: 3px 3px 0 0 var(--text-ink);
+}
+
+/* ============================================================================
+   SISTEMA DE DISEÑO MARCHANTE — "Tierra, Tinta y Achiote"
+   Arquitectura de Tokens en 3 Capas: Primitivo → Semántico → Componente
+   ============================================================================ */
+
+:root {
+  /* 1. TOKENS PRIMITIVOS (Raíz de color y carácter artesanal) */
+  --p-kraft-50: #FFFDF9;
+  --p-kraft-100: #FAF6EE;
+  --p-kraft-200: #F1E9DC;
+  --p-kraft-300: #DFD3C3;
+  --p-kraft-400: #C4B39D;
+
+  --p-tinto-950: #1C1714;
+  --p-tinto-900: #241E1B;
+  --p-tinto-800: #382F2A;
+  --p-tinto-600: #5C5148;
+  --p-tinto-400: #6B5F55; /* antes #877A6E (3,9:1, no pasaba AA) */
+
+  --p-achiote-600: #C83E2B;
+  --p-achiote-700: #A62F1F;
+  --p-achiote-100: #FDECE9;
+
+  --p-bijao-700: #1B6B4A;
+  --p-bijao-800: #135238;
+  --p-bijao-100: #E5F5ED;
+
+  --p-panela-700: #8F520A; /* antes #B5680D (3,9:1, no pasaba AA) */
+  --p-panela-100: #FDF3E3;
+
+  --p-guayaba-700: #B42318;
+  --p-guayaba-100: #FEECEB;
+
+  /* 2. TOKENS SEMÁNTICOS */
+  --bg-canvas: var(--p-kraft-100);
+  --bg-card: var(--p-kraft-50);
+  --bg-subtle: var(--p-kraft-200);
+  --border-ink: var(--p-kraft-300);
+  --border-strong: var(--p-tinto-950);
+
+  --text-ink: var(--p-tinto-950);
+  --text-secondary: var(--p-tinto-800);
+  --text-muted: var(--p-tinto-600);
+
+  --accent-primary: var(--p-achiote-600);
+  --accent-primary-hover: var(--p-achiote-700);
+  --accent-primary-soft: var(--p-achiote-100);
+  --text-on-primary: var(--p-kraft-50);
+
+  --accent-profit: var(--p-bijao-700);
+  --accent-profit-hover: var(--p-bijao-800);
+  --accent-profit-soft: var(--p-bijao-100);
+
+  --accent-warning: var(--p-panela-700);
+  --accent-warning-soft: var(--p-panela-100);
+
+  --accent-danger: var(--p-guayaba-700);
+  --accent-danger-soft: var(--p-guayaba-100);
+
+  --border-soft: var(--p-kraft-400);
+  --text-faint: var(--p-tinto-400);
+  --bg-ink-hover: var(--p-tinto-900);
+  --p-kraft-dot: #D8C9B5;
+
+  /* 3. TOKENS DE COMPONENTE */
+  --shadow-stamp: 0 2px 0 0 var(--border-ink);
+  --shadow-stamp-strong: 3px 3px 0 0 var(--border-strong);
+  --radius-card: 1rem;
+  --touch-min: 44px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-ink);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tipografía con carácter para títulos */
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+/* Cifras de dinero y recibos alineadas al milímetro */
+.font-mono-cop {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tarjeta estilo boleto / libreta de mostrador */
+.card-boleto {
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-ink);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-stamp);
+}
+
+.card-boleto-strong {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-stamp-strong);
+}
+
+/* Patrón sutil de papel kraft punteado */
+.bg-kraft-dots {
+  background-color: var(--bg-canvas);
+  background-image: radial-gradient(var(--p-kraft-dot) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* Patrón de toldo de tienda de barrio en el borde superior */
+.toldo-stripe {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent-primary) 0px,
+    var(--accent-primary) 20px,
+    var(--bg-canvas) 20px,
+    var(--bg-canvas) 40px
+  );
+}
+
+/* Accesibilidad WCAG 2.2 AA: anillo de foco visible siempre con teclado */
+:focus-visible {
+  outline: 2.5px solid var(--accent-primary);
+  outline-offset: 2px;
+}

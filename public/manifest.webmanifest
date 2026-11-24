@@ -1,0 +1,19 @@
+{
+  "name": "Marchante — Tu tienda de barrio, pero digital",
+  "short_name": "Marchante",
+  "description": "Catálogo público por WhatsApp, venta rápida, gastos, clientes y ganancias diarias para emprendedores.",
+  "start_url": "/panel",
+  "display": "standalone",
+  "background_color": "#FAF6EE",
+  "theme_color": "#C83E2B",
+  "lang": "es-CO",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
