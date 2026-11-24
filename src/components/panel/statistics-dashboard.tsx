@@ -17,13 +17,13 @@ export function StatisticsDashboard({ initialStats }: { initialStats: Statistics
 
   return (
     <div aria-busy={loading} className={`space-y-6 pb-20 ${loading ? 'opacity-70' : ''}`}>
-      <div className="card-boleto-strong p-5 sm:p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      <div className="card-boleto p-5 sm:p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-brand">
-            Zona horaria America/Bogota · {stats.period.fromYmd} a {stats.period.toYmd}
+          <span className="text-[11px] font-bold uppercase tracking-wider text-brand">
+            America/Bogota · {stats.period.fromYmd} a {stats.period.toYmd}
           </span>
-          <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Estadísticas y gráficas de tu negocio</h1>
-          <p className="text-sm text-ink-muted">Cada gráfica te explica en una frase clara cómo se está moviendo tu tienda.</p>
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Estadísticas de tu negocio</h1>
+          <p className="text-sm text-ink-muted mt-0.5">Frases claras y gráficas para entender cómo evoluciona tu tienda.</p>
         </div>
         <PeriodSelector
           value={period}

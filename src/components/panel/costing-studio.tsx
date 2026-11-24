@@ -17,18 +17,17 @@ export function CostingStudio({ initialData }: { initialData: CostingInitialData
 
   return (
     <div className="space-y-6 pb-20">
-      <div className="card-boleto-strong p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="card-boleto p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-brand">Rentabilidad por producto</span>
+          <span className="text-[11px] font-bold uppercase tracking-wider text-brand">Rentabilidad por producto</span>
           <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Costos y margen de ganancia</h1>
-          <p className="text-sm text-ink-muted">
-            Anota cuánto te cuesta hacer cada producto (de un golpe o desglosado por ingredientes) y mira cuánto te
-            queda libre en pesos y en porcentaje.
+          <p className="text-sm text-ink-muted max-w-2xl mt-0.5">
+            Anota cuánto te cuesta hacer cada producto (de un golpe o por ingredientes) y mira tu margen libre en pesos y porcentaje.
           </p>
         </div>
 
         {/* Meta de margen del simulador (H4) */}
-        <div className="rounded-2xl border-2 border-ink bg-canvas p-3.5 space-y-1 shrink-0">
+        <div className="rounded-2xl border border-line bg-canvas p-3.5 space-y-1 shrink-0">
           <label htmlFor="target-margin-range" className="text-xs font-bold text-ink flex items-center justify-between gap-3">
             <span>Meta de margen deseado:</span>
             <strong className="font-mono-cop text-sm text-brand">{costing.targetMargin}%</strong>
@@ -41,7 +40,7 @@ export function CostingStudio({ initialData }: { initialData: CostingInitialData
             step="5"
             value={costing.targetMargin}
             onChange={(e) => costing.setTargetMargin(Number(e.target.value))}
-            className="w-48 accent-brand"
+            className="w-48 accent-brand cursor-pointer"
           />
           <p className="text-[11px] text-ink-muted">Calcula el precio sugerido en cada producto</p>
         </div>

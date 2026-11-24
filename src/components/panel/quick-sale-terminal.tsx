@@ -23,12 +23,12 @@ export function QuickSaleTerminal({ initialData }: { initialData: QuickSaleIniti
 
   return (
     <div className="space-y-6 pb-24">
-      <div className="card-boleto-strong p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3">
+      <div className="card-boleto p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-brand">
-            Lo más rápido de tu tienda · {initialData.todayBogota}
+          <span className="text-[11px] font-bold uppercase tracking-wider text-brand">
+            Terminal de cobro · {initialData.todayBogota}
           </span>
-          <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Venta rápida y pedidos de WhatsApp</h1>
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Venta rápida y pedidos</h1>
         </div>
 
         <div className="flex items-center gap-2.5">
@@ -46,7 +46,7 @@ export function QuickSaleTerminal({ initialData }: { initialData: QuickSaleIniti
             title={sale.soundEnabled ? 'Sonido de caja activado' : 'Sonido silenciado'}
             aria-label={sale.soundEnabled ? 'Silenciar sonido de venta' : 'Activar sonido de venta'}
             aria-pressed={sale.soundEnabled}
-            className="min-h-[44px] min-w-[44px] rounded-xl border border-ink bg-paper inline-flex items-center justify-center text-ink cursor-pointer"
+            className="min-h-[44px] min-w-[44px] rounded-xl border border-line hover:border-ink bg-paper inline-flex items-center justify-center text-ink cursor-pointer transition-colors"
           >
             {sale.soundEnabled ? (
               <Volume2 className="h-5 w-5 text-profit" />

@@ -100,11 +100,11 @@
   --border-soft: var(--p-kraft-400);
   --text-faint: var(--p-tinto-400);
   --bg-ink-hover: var(--p-tinto-900);
-  --p-kraft-dot: #D8C9B5;
+  --p-kraft-dot: #E2D7C8;
 
-  /* 3. TOKENS DE COMPONENTE */
-  --shadow-stamp: 0 2px 0 0 var(--border-ink);
-  --shadow-stamp-strong: 3px 3px 0 0 var(--border-strong);
+  /* 3. TOKENS DE COMPONENTE — Refinados para evitar saturación visual */
+  --shadow-stamp: 0 1px 2px 0 rgba(28, 23, 20, 0.05);
+  --shadow-stamp-strong: 0 3px 6px -1px rgba(28, 23, 20, 0.08), 0 2px 4px -2px rgba(28, 23, 20, 0.04);
   --radius-card: 1rem;
   --touch-min: 44px;
 }
@@ -133,17 +133,17 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* Tarjeta estilo boleto / libreta de mostrador */
+/* Tarjeta estilo libreta de mostrador — limpia, cálida y legible */
 .card-boleto {
   background-color: var(--bg-card);
-  border: 1.5px solid var(--border-ink);
+  border: 1px solid var(--border-ink);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-stamp);
 }
 
 .card-boleto-strong {
   background-color: var(--bg-card);
-  border: 2px solid var(--border-strong);
+  border: 1.5px solid var(--border-soft);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-stamp-strong);
 }
@@ -152,18 +152,19 @@ body {
 .bg-kraft-dots {
   background-color: var(--bg-canvas);
   background-image: radial-gradient(var(--p-kraft-dot) 1px, transparent 1px);
-  background-size: 18px 18px;
+  background-size: 20px 20px;
 }
 
-/* Patrón de toldo de tienda de barrio en el borde superior */
+/* Patrón de toldo de tienda de barrio — discreto y armónico */
 .toldo-stripe {
   background: repeating-linear-gradient(
     90deg,
     var(--accent-primary) 0px,
-    var(--accent-primary) 20px,
-    var(--bg-canvas) 20px,
-    var(--bg-canvas) 40px
+    var(--accent-primary) 14px,
+    var(--bg-canvas) 14px,
+    var(--bg-canvas) 28px
   );
+  opacity: 0.95;
 }
 
 /* Accesibilidad WCAG 2.2 AA: anillo de foco visible siempre con teclado */

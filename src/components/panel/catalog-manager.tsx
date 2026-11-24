@@ -81,13 +81,12 @@ export function CatalogManager({
 
   return (
     <div className="space-y-6 pb-20">
-      <div className="card-boleto-strong p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="card-boleto p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-brand">Vitrina /{businessSlug}</span>
-          <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Catálogo de productos y categorías</h1>
-          <p className="text-sm text-ink-muted">
-            Sube tus productos con foto optimizada, ordénalos por categoría y marca &ldquo;Agotado por
-            hoy&rdquo; con un solo toque.
+          <span className="text-[11px] font-bold uppercase tracking-wider text-brand">Vitrina /{businessSlug}</span>
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Catálogo de productos</h1>
+          <p className="text-sm text-ink-muted mt-0.5 max-w-2xl">
+            Sube productos con fotos optimizadas, organízalos por categoría y cambia estados con 1 toque.
           </p>
         </div>
 
@@ -95,7 +94,7 @@ export function CatalogManager({
           <button
             type="button"
             onClick={() => setCategoryDialog({ mode: 'create', name: '' })}
-            className="min-h-[44px] px-3.5 inline-flex items-center gap-1.5 rounded-xl border border-ink bg-canvas text-xs sm:text-sm font-bold text-ink hover:bg-subtle cursor-pointer"
+            className="min-h-[40px] px-3.5 inline-flex items-center gap-1.5 rounded-xl border border-line hover:border-ink bg-canvas text-xs sm:text-sm font-semibold text-ink hover:bg-subtle transition-colors cursor-pointer"
           >
             <FolderPlus className="h-4 w-4 text-brand" />
             Nueva categoría
@@ -103,7 +102,7 @@ export function CatalogManager({
           <button
             type="button"
             onClick={openNewProduct}
-            className="min-h-[44px] px-4 inline-flex items-center gap-1.5 rounded-xl border-2 border-ink bg-brand text-xs sm:text-sm font-bold text-paper shadow-stamp-2 hover:bg-brand-strong cursor-pointer"
+            className="min-h-[40px] px-4 inline-flex items-center gap-1.5 rounded-xl bg-brand text-xs sm:text-sm font-bold text-paper shadow-xs hover:bg-brand-strong transition-all cursor-pointer"
           >
             <Plus className="h-4 w-4" />
             Nuevo producto

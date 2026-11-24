@@ -32,24 +32,23 @@ export function BusinessProfileForm({ initialData }: { initialData: BusinessProf
 
   return (
     <form onSubmit={profile.submit} className="space-y-6 pb-20">
-      <div className="card-boleto-strong p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="card-boleto p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2">
             <span
-              className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-bold ${
+              className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${
                 openStatus.isOpen
-                  ? 'bg-profit-soft border-profit text-profit'
-                  : 'bg-warning-soft border-warning text-warning'
+                  ? 'bg-profit-soft border-profit/30 text-profit'
+                  : 'bg-warning-soft border-warning/30 text-warning'
               }`}
             >
               ● {openStatus.statusMessage}
             </span>
           </div>
           <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Perfil de tu negocio</h1>
-          <p className="text-sm text-ink-muted">
-            Todo lo que configures aquí se muestra en tu vitrina pública{' '}
-            <span className="font-mono-cop font-semibold text-ink">/{slugCheck.normalized}</span> y arma tus
-            pedidos de WhatsApp.
+          <p className="text-sm text-ink-muted mt-0.5">
+            Configura los datos que tus clientes verán en tu vitrina{' '}
+            <span className="font-mono-cop font-semibold text-ink">/{slugCheck.normalized}</span> y en tus pedidos de WhatsApp.
           </p>
         </div>
 
@@ -57,7 +56,7 @@ export function BusinessProfileForm({ initialData }: { initialData: BusinessProf
           <button
             type="button"
             onClick={copyPublicUrl}
-            className="min-h-[44px] px-3.5 inline-flex items-center gap-1.5 rounded-xl border border-ink bg-canvas text-xs font-bold text-ink hover:bg-subtle transition-colors cursor-pointer"
+            className="min-h-[40px] px-3.5 inline-flex items-center gap-1.5 rounded-xl border border-line hover:border-ink bg-canvas text-xs font-semibold text-ink hover:bg-subtle transition-colors cursor-pointer"
           >
             <Copy className="h-4 w-4 text-brand" />
             <span aria-live="polite">{copiedLink ? '¡Link copiado!' : 'Copiar link'}</span>
@@ -66,7 +65,7 @@ export function BusinessProfileForm({ initialData }: { initialData: BusinessProf
             href={`/${slugCheck.normalized}`}
             target="_blank"
             rel="noreferrer"
-            className="min-h-[44px] px-3.5 inline-flex items-center gap-1.5 rounded-xl border border-ink bg-paper text-xs font-bold text-ink hover:bg-subtle transition-colors"
+            className="min-h-[40px] px-3.5 inline-flex items-center gap-1.5 rounded-xl border border-line hover:border-ink bg-paper text-xs font-semibold text-ink hover:bg-subtle transition-colors"
           >
             <ExternalLink className="h-4 w-4 text-brand" />
             Ver vitrina

@@ -38,13 +38,13 @@ export function CatalogCustomizationStudio({
 
   return (
     <div className="space-y-6 pb-20">
-      <div className="card-boleto-strong p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="card-boleto p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-brand">Identidad de tu tienda</span>
-          <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Personalizar catálogo público</h1>
-          <p className="text-sm text-ink-muted">
-            Haz que <span className="font-mono-cop font-bold text-ink">/{initialBusiness.slug}</span> luzca único
-            con tu logo, portada, colores, patrón artesanal, letra y orden de categorías.
+          <span className="text-[11px] font-bold uppercase tracking-wider text-brand">Identidad de tu vitrina</span>
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Personalizar vitrina pública</h1>
+          <p className="text-sm text-ink-muted mt-0.5">
+            Personaliza cómo ven tus clientes <span className="font-mono-cop font-semibold text-ink">/{initialBusiness.slug}</span>:
+            logo, portada, paleta de colores, tipografía y orden.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export function CatalogCustomizationStudio({
           <button
             type="button"
             onClick={studio.reset}
-            className="min-h-[44px] px-3.5 inline-flex items-center gap-1.5 rounded-xl border border-line bg-canvas text-xs font-bold text-ink-muted hover:text-ink cursor-pointer"
+            className="min-h-[40px] px-3.5 inline-flex items-center gap-1.5 rounded-xl border border-line hover:border-ink bg-canvas text-xs font-semibold text-ink-muted hover:text-ink transition-colors cursor-pointer"
           >
             <RotateCcw className="h-4 w-4" />
             Deshacer
@@ -61,7 +61,7 @@ export function CatalogCustomizationStudio({
             href={`/${initialBusiness.slug}`}
             target="_blank"
             rel="noreferrer"
-            className="min-h-[44px] px-3.5 inline-flex items-center gap-1.5 rounded-xl border border-ink bg-paper text-xs font-bold text-ink hover:bg-subtle"
+            className="min-h-[40px] px-3.5 inline-flex items-center gap-1.5 rounded-xl border border-line hover:border-ink bg-paper text-xs font-semibold text-ink hover:bg-subtle transition-colors"
           >
             <ExternalLink className="h-4 w-4 text-brand" />
             Abrir vitrina real

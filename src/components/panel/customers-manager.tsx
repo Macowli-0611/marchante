@@ -27,21 +27,20 @@ export function CustomersManager({ initialCustomers }: { initialCustomers: Custo
 
   return (
     <div className="space-y-6 pb-20">
-      <div className="card-boleto-strong p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="card-boleto p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-brand">
-            Tu clientela fiel ({book.customers.length})
+          <span className="text-[11px] font-bold uppercase tracking-wider text-brand">
+            Tu clientela ({book.customers.length})
           </span>
           <h1 className="font-display text-2xl sm:text-3xl font-bold text-ink">Cuaderno de clientes</h1>
-          <p className="text-sm text-ink-muted">
-            Se llena solo cuando te piden por el catálogo y también puedes anotar clientes a mano con sus gustos,
-            notas e historial de compras.
+          <p className="text-sm text-ink-muted mt-0.5 max-w-2xl">
+            Se actualiza con cada pedido del catálogo o venta rápida. Anota sus gustos, notas y teléfonos.
           </p>
         </div>
         <button
           type="button"
           onClick={() => setForm({ customerId: null, values: { name: '', phone: '', address: '', notes: '' } })}
-          className="min-h-[44px] px-4 inline-flex items-center gap-2 rounded-xl border-2 border-ink bg-brand text-sm font-bold text-paper shadow-stamp-2 hover:bg-brand-strong shrink-0 cursor-pointer"
+          className="min-h-[42px] px-4 inline-flex items-center gap-2 rounded-xl bg-brand text-sm font-bold text-paper shadow-xs hover:bg-brand-strong transition-all shrink-0 cursor-pointer"
         >
           <UserPlus className="h-4 w-4" />
           Nuevo cliente
