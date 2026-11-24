@@ -68,8 +68,9 @@ Los colores viven **solo** en `src/app/globals.css`: primitivos (`--p-*`) → se
 
 ### Pasos
 ```bash
-# 1. Entrar al directorio del proyecto
-cd /Users/usuario/.gemini/antigravity/scratch/marchante
+# 1. Clonar y entrar al repositorio
+git clone https://github.com/Macowli-0611/marchante.git
+cd marchante
 
 # 2. Instalar dependencias
 pnpm install
